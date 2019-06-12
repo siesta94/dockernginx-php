@@ -12,6 +12,7 @@ RUN apk --update --no-cache add \
 	libxml2-dev \
 	libxslt-dev \
 	shadow \
+	bash \
 	zlib-dev
 
 RUN docker-php-ext-configure \

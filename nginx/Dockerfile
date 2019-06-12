@@ -95,11 +95,11 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 
 RUN mkdir -p /var/www && chown nginx:nginx -R /var/www
 
-COPY configs/test.conf /etc/nginx/conf.d/test.conf
-COPY configs/test1.conf /etc/nginx/conf.d/test1.conf
-COPY configs/test2.conf /etc/nginx/conf.d/test2.conf
-COPY configs/test3.conf /etc/nginx/conf.d/test3.conf
-COPY configs/magento.conf /etc/nginx/conf.d/magento.conf
+#COPY configs/test.conf /etc/nginx/conf.d/test.conf
+#COPY configs/test1.conf /etc/nginx/conf.d/test1.conf
+#COPY configs/test2.conf /etc/nginx/conf.d/test2.conf
+#COPY configs/test3.conf /etc/nginx/conf.d/test3.conf
+#COPY configs/magento.conf /etc/nginx/conf.d/magento.conf
 
 EXPOSE 80
 

@@ -1,2 +1,2 @@
 # dockerz_nginx-php
-nginx + php-fpm + mariaDB all versions
+Install docker and docker compose. Then just docker-compose build -> docker-compose up -d

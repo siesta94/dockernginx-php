@@ -9,4 +9,8 @@
 - ```./nginx_reload.sh``` - reloading nginx inside of container.  
 - ```./importdb.sh``` - Will ask for DB name inside of mysql and .sql file you want to import. 
 ### Editing configuration files:  
-Nginx configuration files are located in ```nginx/confings/*.conf``` and they are linked as volume. Upon changing those files just run ```./nginx_reload.sh``` so it take efects. Nginx
+Nginx configuration files are located in ```nginx/confings/*.conf``` and they are linked as volume. Upon changing those files just run ```./nginx_reload.sh``` so it takes efect.  
+### PHP
+Depending on PHP version you want edit nginx configuration with ```container_name:9000``` (example: fastcgi_pass dockernginx_fpm56_1:9000)
+### Logs
+Logs are located in ```logs/nginx/*.log``` 

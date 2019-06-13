@@ -7,9 +7,9 @@ services:
              - 80:80
            volumes:
              - ./logs/nginx:/var/log/nginx
+             - ./nginx/configs:/etc/nginx/conf.d
              - ../projects/nginx_test:/var/www/test
              - ../projects/klockit:/var/www/klockit
-             - ./nginx/configs:/etc/nginx/conf.d
            links:
              - fpm5.6
              - fpm7.0
@@ -20,6 +20,7 @@ services:
            ports:
              - 9004:9004
            volumes:
+             - ./logs/php-fpm/php-fpm5_6.log:/var/log/php56_errors.log
              - ../projects/nginx_test:/var/www/test
              - ../projects/klockit:/var/www/klockit
         fpm7.0:
@@ -27,12 +28,14 @@ services:
            ports:
              - 9001:9001
            volumes:
+             - ./logs/php-fpm/php-fpm7_0.log:/var/log/php70_errors.log
              - ../projects/nginx_test:/var/www/test
         fpm7.1:
            build: php71
            ports:
              - 9002:9002
            volumes:
+             - ./logs/php-fpm/php-fpm7_1.log:/var/log/php71_errors.log
              - ../projects/nginx_test:/var/www/test       
         fpm7.2:
            build: php72

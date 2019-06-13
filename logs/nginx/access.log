@@ -1788,3 +1788,5 @@
 172.19.0.1 - - [13/Jun/2019:09:06:06 +0000] "GET /skin/frontend/ultimo/default/favicon.ico HTTP/1.1" 200 1150 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0" "-"
 172.19.0.1 - - [13/Jun/2019:09:06:12 +0000] "POST /amcart/ajax/index/ HTTP/1.1" 200 157 "http://local.klockit.com/q-80-quartz-clock-movement.html" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0" "-"
 172.19.0.1 - - [13/Jun/2019:09:06:20 +0000] "GET /energizer-aa-1-5v-alkaline-battery.html HTTP/1.1" 499 0 "http://local.klockit.com/q-80-quartz-clock-movement.html" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0" "-"
+172.19.0.1 - - [13/Jun/2019:09:55:12 +0000] "GET / HTTP/1.1" 200 25609 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0" "-"
+172.19.0.1 - - [13/Jun/2019:09:55:13 +0000] "GET /favicon.ico HTTP/1.1" 404 153 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0" "-"

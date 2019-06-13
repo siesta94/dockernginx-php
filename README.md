@@ -1,4 +1,4 @@
-# dockerz_nginx-php
+## Docker LEMP with all PHP versions + Redis and few useful shell scripts
 - Install docker and docker compose.
 - Then just ```docker-compose build -> docker-compose up -d```  
 ### There are couple shell scripts:

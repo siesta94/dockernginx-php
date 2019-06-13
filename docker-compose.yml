@@ -8,7 +8,7 @@ services:
            volumes:
              - ./logs/nginx:/var/log/nginx
              - ../projects/nginx_test:/var/www/test
-             - ../projects/magento:/var/www/magento
+             - ../projects/klockit:/var/www/klockit
              - ./nginx/configs:/etc/nginx/conf.d
            links:
              - fpm5.6
@@ -21,28 +21,25 @@ services:
              - 9004:9004
            volumes:
              - ../projects/nginx_test:/var/www/test
-             - ../projects/magento:/var/www/magento
+             - ../projects/klockit:/var/www/klockit
         fpm7.0:
            build: php70
            ports:
              - 9001:9001
            volumes:
              - ../projects/nginx_test:/var/www/test
-             - ../projects/magento:/var/www/magento
         fpm7.1:
            build: php71
            ports:
              - 9002:9002
            volumes:
              - ../projects/nginx_test:/var/www/test       
-             - ../projects/magento:/var/www/magento
         fpm7.2:
            build: php72
            ports:
              - 9003:9003
            volumes:
              - ../projects/nginx_test:/var/www/test
-             - ../projects/magento:/var/www/magento
         redis:
            build: redis
            ports: 

@@ -7,4 +7,6 @@
 - ```./restart_all.sh``` - restarts all containers from project. 
 - ```./killall.sh``` - kill all containers from project. 
 - ```./nginx_reload.sh``` - reloading nginx inside of container.  
-- ```./importdb.sh``` - Will ask for DB name inside of mysql and .sql file you want to import.  
+- ```./importdb.sh``` - Will ask for DB name inside of mysql and .sql file you want to import. 
+### Editing configuration files:  
+Nginx configuration files are located in ```nginx/confings/*.conf``` and they are linked as volume. Upon changing those files just run ```./nginx_reload.sh``` so it take efects. Nginx

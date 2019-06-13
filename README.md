@@ -8,6 +8,7 @@
 - ```./killall.sh``` - kill all containers from project. 
 - ```./nginx_reload.sh``` - reloading nginx inside of container.  
 - ```./importdb.sh``` - Will ask for DB name inside of mysql and .sql file you want to import. 
+- ```./phpinfo``` - Will echo phpinfo page into ../projects/nginx_test/index.php.  
 ### Editing configuration files:  
 Nginx configuration files are located in ```nginx/confings/*.conf``` and they are linked as volume. Upon changing those files just run ```./nginx_reload.sh``` so it takes efect.  
 ### PHP
@@ -18,7 +19,7 @@ Add to your host files 127.0.0.1 php70.com
 Add to your host files 127.0.0.1 php71.com  
 Add to your host files 127.0.0.1 php72.com  
 
-And run phpinfo.sh  
+And run ```./phpinfo.sh```  
 
 Navigate to browser and open those urls!
 

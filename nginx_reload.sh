@@ -1,2 +1,3 @@
 #/bin/bash
-docker container exec dockernginx_web_1 nginx -s reload
+a=$(basename "$PWD")
+docker container exec "$a"_web_1 nginx -s reload

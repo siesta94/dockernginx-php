@@ -6,6 +6,7 @@ services:
            ports:
              - 80:80
            volumes:
+             - ./logs/nginx:/var/log/nginx
              - ../projects/nginx_test:/var/www/test
              - ../projects/magento:/var/www/magento
              - ./nginx/configs:/etc/nginx/conf.d

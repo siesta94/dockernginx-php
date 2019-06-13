@@ -1,2 +1,4 @@
 #/bin/bash
-docker container exec dockernginx_redis_1 redis-cli flushall
+a=$(basename "$PWD")
+#echo "$a"
+docker container exec "$a"_redis_1 redis-cli flushall

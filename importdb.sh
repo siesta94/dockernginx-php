@@ -1,5 +1,5 @@
-#/bin/bash
-#
+#!/bin/bash
+
 echo "Enter DB name: "
 read db
 echo "Enter DB you are importing name: "

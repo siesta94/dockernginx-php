@@ -12,3 +12,6 @@
 2019/08/20 11:19:47 [error] 6#6: *3 open() "/var/www/test/favicon.ico" failed (2: No such file or directory), client: 192.168.2.223, server: php72.com, request: "GET /favicon.ico HTTP/1.1", host: "php72.com"
 2019/08/20 11:19:50 [error] 6#6: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  phpinfo(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /var/www/test/index.php on line 1" while reading response header from upstream, client: 192.168.2.223, server: php56.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.8:9000", host: "php56.com"
 2019/08/20 11:19:50 [error] 6#6: *5 open() "/var/www/test/favicon.ico" failed (2: No such file or directory), client: 192.168.2.223, server: php56.com, request: "GET /favicon.ico HTTP/1.1", host: "php56.com"
+2019/08/20 11:21:37 [notice] 7#7: signal process started
+2019/08/20 11:21:44 [notice] 13#13: signal process started
+2019/08/20 11:21:48 [notice] 19#19: signal process started

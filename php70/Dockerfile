@@ -27,7 +27,10 @@ RUN docker-php-ext-install \
 	soap \
 	xsl \
 	mbstring \
-	zip
+	zip \
+        dom \
+        mcrypt
+
 
 RUN apk update && apk add autoconf make
 RUN pecl install xdebug-2.6.1

@@ -27,7 +27,9 @@ RUN docker-php-ext-install \
 	soap \
 	xsl \
 	mbstring \
-	zip
+	zip \
+	dom \
+	mcrypt
 
 RUN apk update && apk add autoconf make
 

@@ -28,8 +28,7 @@ RUN docker-php-ext-install \
 	xsl \
 	mbstring \
 	zip \
-        dom \
-        mcrypt
+        dom
 
 
 RUN apk update && apk add autoconf make

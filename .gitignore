@@ -1,0 +1,4 @@
+#Ignoring next directory and files:
+
+db/
+logs/

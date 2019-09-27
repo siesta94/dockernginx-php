@@ -131,3 +131,596 @@ PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/pros
 2019/09/26 12:29:56 [error] 76#76: *2684 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Call to a member function getModelInstance() on null in /var/www/magento1/app/Mage.php on line 466" while reading response header from upstream, client: 192.168.6.94, server: local.magento1.com, request: "GET /downloader/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento1.com"
 2019/09/26 12:29:56 [error] 76#76: *2684 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Call to a member function getModelInstance() on null in /var/www/magento1/app/Mage.php on line 466" while reading response header from upstream, client: 192.168.6.94, server: local.magento1.com, request: "GET /downloader/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento1.com"
 2019/09/26 12:29:57 [error] 76#76: *2684 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Call to a member function getModelInstance() on null in /var/www/magento1/app/Mage.php on line 466" while reading response header from upstream, client: 192.168.6.94, server: local.magento1.com, request: "GET /downloader/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento1.com"
+2019/09/26 14:12:23 [notice] 629#629: signal process started
+2019/09/26 14:51:34 [notice] 7#7: signal process started
+2019/09/27 07:25:52 [error] 6#6: *25 directory index of "/var/www/nginx_test/" is forbidden, client: 192.168.2.223, server: php71.com, request: "GET / HTTP/1.1", host: "php71.com"
+2019/09/27 07:25:52 [error] 6#6: *25 open() "/var/www/nginx_test/favicon.ico" failed (2: No such file or directory), client: 192.168.2.223, server: php71.com, request: "GET /favicon.ico HTTP/1.1", host: "php71.com"
+2019/09/27 07:26:29 [error] 6#6: *27 open() "/var/www/nginx_test/favicon.ico" failed (2: No such file or directory), client: 192.168.2.223, server: php72.com, request: "GET /favicon.ico HTTP/1.1", host: "php72.com"
+2019/09/27 07:39:46 [notice] 7#7: signal process started
+2019/09/27 07:40:18 [error] 12#12: *29 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The file "/var/www/magento2/var/.regenerate" cannot be deleted Warning!unlink(/var/www/magento2/var/.regenerate): Permission denied in /var/www/magento2/vendor/magento/framework/Filesystem/Driver/File.php:382
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Filesystem/Directory/Write.php(186): Magento\Framework\Filesystem\Driver\File->deleteFile('/var/www/magent...')
+#1 /var/www/magento2/vendor/magento/framework/Code/GeneratedFiles.php(98): Magento\Framework\Filesystem\Directory\Write->delete('/var/.regenerat...')
+#2 /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php(114): Magento\Framework\Code\GeneratedFiles->cleanGeneratedFiles()
+#3 /var/www/magento2/vendor/magento/framework/App/Bootstrap.php(385): Magento\Framework\App\ObjectManagerFactory->create(Array)
+#4 /var/www/magento2/vendor/magento/framework/App/Bootstrap.php(362): Magento\Framework\App\Bootstrap->initObjectManager()
+#5 /var/" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:32 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:41:33 [error] 12#12: *33 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:43:27 [error] 12#12: *55 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:43:27 [error] 12#12: *55 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:43:30 [error] 12#12: *58 FastCGI sent in stderr: "PHP message: PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php on line 81
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/magento2/pub/index.php:0
+PHP message: PHP   2. Magento\Framework\App\Bootstrap->createApplication() /var/www/magento2/pub/index.php:36
+PHP message: PHP   3. Magento\Framework\App\Bootstrap->initObjectManager() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:232
+PHP message: PHP   4. Magento\Framework\App\ObjectManagerFactory->create() /var/www/magento2/vendor/magento/framework/App/Bootstrap.php:385
+PHP message: PHP   5. Magento\Framework\App\ObjectManager\Environment\Developer->configureObjectManager() /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php:194
+PHP message: PHP   6. Magento\Framework\App\ObjectManager\ConfigLoader->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/Environment/Developer.php:77
+PHP message: PHP   7. Magento\Framework\App\Cache\Type\Config->load() /var/www/magento2/vendor/magento/framework/App/ObjectManager/ConfigLoader.php:66
+PHP message: PHP   8. Magento\Framework\App\Cache\Type\Config->_getFrontend() /var/www/magento2/vendor/magento/framework/Cache/Frontend/Decorator/Bare.php:65
+PHP message: PHP   9. Magento\Framework\App\Cache\Type\FrontendPool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/Config.php:49
+PHP message: PHP  10. Magento\Framework\App\Cache\Frontend\Pool->get() /var/www/magento2/vendor/magento/framework/App/Cache/Type/FrontendPool.php:84
+PHP message: PHP  11. Magento\Framework\App\Cache\Frontend\Pool->_initialize() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:146
+PHP message: PHP  12. Magento\Framework\App\Cache\Frontend\Factory->create() /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php:67
+PHP message: PHP  13. Zend_Cache::factor
+2019/09/27 07:45:57 [notice] 13#13: signal process started
+2019/09/27 07:48:10 [notice] 19#19: signal process started
+2019/09/27 07:54:31 [error] 24#24: *66 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/magento2/var/cache/" is not writable in /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/magent...')
+#2 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Factory.php(154): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php(67): Magent" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 07:54:40 [error] 24#24: *66 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/magento2/var/cache/" is not writable in /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/magent...')
+#2 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Factory.php(154): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php(67): Magent" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 07:54:40 [error] 24#24: *66 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/magento2/var/cache/" is not writable in /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/magent...')
+#2 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Factory.php(154): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php(67): Magent" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 07:54:41 [error] 24#24: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/magento2/var/cache/" is not writable in /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/magent...')
+#2 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Factory.php(154): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php(67): Magent" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 07:54:41 [error] 24#24: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/magento2/var/cache/" is not writable in /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/magent...')
+#2 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Factory.php(154): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php(67): Magent" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 07:54:44 [error] 24#24: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/magento2/var/cache/" is not writable in /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/magent...')
+#2 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Factory.php(154): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php(67): Magent" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 07:54:44 [error] 24#24: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/magento2/var/cache/" is not writable in /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/magento2/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/magent...')
+#2 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/magento2/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Factory.php(154): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/magento2/vendor/magento/framework/App/Cache/Frontend/Pool.php(67): Magent" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 08:39:47 [error] 24#24: *86 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 08:39:49 [error] 24#24: *86 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 08:39:49 [error] 24#24: *86 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 08:39:49 [error] 24#24: *86 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 08:48:10 [error] 24#24: *142 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 08:54:25 [notice] 25#25: signal process started
+2019/09/27 09:17:17 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 09:17:18 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 09:17:47 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 09:17:49 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/magento2/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/magento2/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/magento2/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/magento2/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters('Magen" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.6:9000", host: "local.magento2.com"
+2019/09/27 09:24:50 [notice] 7#7: signal process started
+2019/09/27 09:25:30 [error] 12#12: *9 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The "/var/www/magento2/var/.regenerate" file can't be deleted. Warning!unlink(/var/www/magento2/var/.regenerate): Permission denied in /var/www/magento2/vendor/magento/framework/Filesystem/Driver/File.php:384
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/Filesystem/Directory/Write.php(188): Magento\Framework\Filesystem\Driver\File->deleteFile('/var/www/magent...')
+#1 /var/www/magento2/vendor/magento/framework/Code/GeneratedFiles.php(99): Magento\Framework\Filesystem\Directory\Write->delete('/var/.regenerat...')
+#2 /var/www/magento2/vendor/magento/framework/App/ObjectManagerFactory.php(111): Magento\Framework\Code\GeneratedFiles->cleanGeneratedFiles()
+#3 /var/www/magento2/vendor/magento/framework/App/Bootstrap.php(211): Magento\Framework\App\ObjectManagerFactory->create(Array)
+#4 /var/www/magento2/vendor/magento/framework/App/Bootstrap.php(126): Magento\Framework\App\Bootstrap->__construct(Object(Magento\F" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:28:15 [notice] 13#13: signal process started
+2019/09/27 09:28:17 [error] 18#18: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET /setup/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:28:58 [error] 18#18: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET /setup/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:28:59 [error] 18#18: *53 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET /setup/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:29:36 [notice] 19#19: signal process started
+2019/09/27 09:29:37 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET /setup/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:29:38 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET /setup/ HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:29:41 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:29:43 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:30:47 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:30:47 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:30:48 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:30:48 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:30:48 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"
+2019/09/27 09:30:48 [error] 25#25: *57 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot instantiate interface Magento\Store\Api\StoreRepositoryInterface in /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php:50
+Stack trace:
+#0 /var/www/magento2/vendor/magento/framework/ObjectManager/ObjectManager.php(70): Magento\Framework\ObjectManager\Factory\Dynamic\Developer->create('Magento\\Store\\A...')
+#1 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(160): Magento\Framework\ObjectManager\ObjectManager->get('Magento\\Store\\A...')
+#2 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(246): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgument(Array, 'Magento\\Store\\A...', NULL, 'storeRepository', 'Magento\\Store\\A...')
+#3 /var/www/magento2/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(34): Magento\Framework\ObjectManager\Factory\AbstractFactory->resolveArgumentsInRuntime('Magento\\Store\\A...', Arra" while reading response header from upstream, client: 192.168.2.223, server: local.magento2.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.7:9000", host: "local.magento2.com"

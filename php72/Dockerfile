@@ -30,6 +30,20 @@ RUN docker-php-ext-install \
 	zip \
         dom 
 
+ENV EXT_REDIS_VERSION=4.3.0 EXT_IGBINARY_VERSION=3.0.1
+
+RUN docker-php-source extract \
+    # igbinary
+    && mkdir -p /usr/src/php/ext/igbinary \
+    &&  curl -fsSL https://github.com/igbinary/igbinary/archive/$EXT_IGBINARY_VERSION.tar.gz | tar xvz -C /usr/src/php/ext/igbinary --strip 1 \
+    && docker-php-ext-install igbinary \
+    # redis
+    && mkdir -p /usr/src/php/ext/redis \
+    && curl -fsSL https://github.com/phpredis/phpredis/archive/$EXT_REDIS_VERSION.tar.gz | tar xvz -C /usr/src/php/ext/redis --strip 1 \
+    && docker-php-ext-configure redis --enable-redis-igbinary \
+    && docker-php-ext-install redis \
+    # cleanup
+    && docker-php-source delete
 
 RUN apk update && apk add autoconf make
 RUN pecl install xdebug-2.6.1
@@ -49,6 +63,11 @@ RUN cd /tmp \
     && mv ioncube/ioncube_loader_lin_7.2.so `php-config --extension-dir` \
     && rm -rf ioncube.tar.gz ioncube \
     && docker-php-ext-enable ioncube_loader_lin_7.2
+
+RUN apk add libmcrypt-dev \
+	&& printf "\n" | pecl install mcrypt \
+	&& docker-php-ext-enable mcrypt
+
 
 COPY ./bin/startup.sh /usr/local/bin/startup.sh
 COPY ./conf/php.ini /usr/local/etc/php/php.ini

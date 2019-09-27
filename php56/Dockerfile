@@ -30,6 +30,25 @@ RUN docker-php-ext-install \
 	zip \
 	dom 
 
+ENV EXT_REDIS_VERSION=4.3.0 EXT_IGBINARY_VERSION=2.0.1
+
+RUN docker-php-source extract \
+    # igbinary
+    && mkdir -p /usr/src/php/ext/igbinary \
+    &&  curl -fsSL https://github.com/igbinary/igbinary/archive/$EXT_IGBINARY_VERSION.tar.gz | tar xvz -C /usr/src/php/ext/igbinary --strip 1 \
+    && docker-php-ext-install igbinary \
+    # redis
+    && mkdir -p /usr/src/php/ext/redis \
+    && curl -fsSL https://github.com/phpredis/phpredis/archive/$EXT_REDIS_VERSION.tar.gz | tar xvz -C /usr/src/php/ext/redis --strip 1 \
+    && docker-php-ext-configure redis --enable-redis-igbinary \
+    && docker-php-ext-install redis \
+    # cleanup
+    && docker-php-source delete
+
+RUN apk add libmcrypt-dev \
+	&& docker-php-ext-configure mcrypt \
+	&& docker-php-ext-install mcrypt
+
 RUN apk update && apk add autoconf make
 
 RUN usermod -u 1000 nobody && \
